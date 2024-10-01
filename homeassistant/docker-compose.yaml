@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  home-assistant:
+    container_name: home-assistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+    # - /home/gpf/homeassistant:/config
+    - "homeassistant:/config"
+    ports:
+    - 8123:8123
+    environment:
+    - TZ=Europe/Rome
+#    network_mode: host
+    restart: unless-stopped
+volumes:
+  homeassistant:
+    driver: local

@@ -1,0 +1,11 @@
+postgres_user.txt
+postgres_password.txt
+nextcloud_admin_password.txt
+nextcloud_admin_user.txt
+pgadmin_email.txt
+pgadmin_password.txt
+old
+postgres_password.txt
+postgres_user.txt
+.deleted
+*secret*

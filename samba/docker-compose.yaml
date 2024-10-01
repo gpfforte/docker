@@ -1,0 +1,42 @@
+version: '3.9'
+services:
+  samba:
+    image: dperson/samba
+    environment:
+      - TZ=Europe/Rome
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      - "445:445/tcp"
+    read_only: false
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+# z means available to all container? Perhaps
+      - /home/gpf/.config/docker:/mnt1:z
+      - /home/gpf/condivisione:/mnt2:z
+      - "conf:/etc/samba"
+      - "samba:/var/lib/samba"
+      - "run:/run/samba"
+      - "cache:/var/cache/samba"
+      - "etc:/etc"
+      - "log:/var/log/samba"
+#    command: '-s "Mount;/mnt" '
+
+volumes:
+  conf:
+    driver: local
+  samba:
+    driver: local
+  run:
+    driver: local
+  cache:
+    driver: local
+  etc:
+    driver: local
+  log:
+    driver: local
