@@ -1,2 +1,3 @@
 Mettere .gitignore per tutti i secret e poi mettere tutto docker su github
 Fatto - Riprovare nextcloud con la rete esterna cancellando anche i volumi perché probabilmente era rimasto qualcosa della precendente configurazione
+Ciao
