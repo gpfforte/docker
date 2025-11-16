@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   openhab:
-    image: "openhab/openhab:4.0.0.M3"
+    image: "openhab/openhab:5.0.2"
     restart: unless-stopped
     ports:
       - 8080:8080
