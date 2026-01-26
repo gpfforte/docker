@@ -3,6 +3,7 @@ version: '3.9'
 services:
   openhab:
     image: "openhab/openhab:5.0.2"
+    container_name: openhab
     restart: unless-stopped
     ports:
       - 8080:8080
